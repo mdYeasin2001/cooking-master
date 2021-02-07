@@ -1,3 +1,9 @@
 body{
     background: #edd263;
 }
+.navbar-background{
+    background: #edd263;
+}
+#meal-details-area{
+    margin-bottom: 20px;
+}
