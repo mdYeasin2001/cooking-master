@@ -9,7 +9,6 @@ body{
 }
 #alert-message{
     display: none;
-    background: tomato;
 }
 #search-meal-btn{
     background: #3B2D64;
