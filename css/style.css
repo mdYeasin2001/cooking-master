@@ -7,3 +7,10 @@ body{
 #meal-details-area{
     margin-bottom: 20px;
 }
+#alert-message{
+    display: none;
+    background: tomato;
+}
+#search-meal-btn{
+    background: #3B2D64;
+}

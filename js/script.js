@@ -16,8 +16,9 @@ const getMeal = (meal) => {
     const mealList = meal.meals;
     console.log(meal.meals);
     
+    
     if(mealInputValue == "" || mealList == null){
-        alert("No meal found");
+        document.getElementById('alert-message').style.display = "block";
     }else{
         mealList.forEach(eachMeal => {
             const mealInfo = `
@@ -32,6 +33,7 @@ const getMeal = (meal) => {
             
             mealArea.innerHTML += mealInfo;
             console.log(eachMeal);
+            document.getElementById('alert-message').style.display = "none"
         });
     }
 
@@ -52,8 +54,8 @@ const showDetails = (mealDetail) => {
     <div class="card col-md-4 m-auto">
         <img src="${mealDetail.meals[0].strMealThumb}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">${mealDetail.meals[0].strMeal}</h5>
-          <h6>Ingredients</h6>
+          <h5 class="card-title fw-bold">${mealDetail.meals[0].strMeal}</h5>
+          <h6 class="fw-bold">Ingredients</h6>
           <ul>
               <li>${mealDetail.meals[0].strIngredient1}</li>
               <li>${mealDetail.meals[0].strIngredient2}</li>
