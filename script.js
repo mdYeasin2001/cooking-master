@@ -12,12 +12,12 @@ document.getElementById('search-meal-btn').addEventListener('click', () => {
 
 const getMeal = (meal) => {
     const mealArea = document.getElementById('meal-area');
-    const mealInputValue = document.getElementById('search-meal-name');
+    const mealInputValue = document.getElementById('search-meal-name').value;
     const mealList = meal.meals;
-    console.log(meal);
+    console.log(meal.meals);
     
-    if(mealInputValue.value == ""){
-        alert("alert");
+    if(mealInputValue == "" || mealList == null){
+        alert("No meal found");
     }else{
         mealList.forEach(eachMeal => {
             const mealInfo = `
